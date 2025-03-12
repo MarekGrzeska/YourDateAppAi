@@ -90,6 +90,14 @@
     font-size: 16px;
     color: var(--text-color-secondary);
   }
+
+  .btn-join {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    box-shadow: 0 5px 15px rgba(255, 56, 106, 0.3);
+    max-width: 300px;
+  }
   
   @media screen and (max-width: 768px) {
     .hero-text h1 {

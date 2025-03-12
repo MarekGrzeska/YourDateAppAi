@@ -17,9 +17,7 @@ const Hero: React.FC = () => {
               zainteresowaniach, wartościach i celach. Dołącz do nas i
               rozpocznij swoją podróż ku miłości!
             </p>
-            <a href="#" className="btn btn-register">
-              Rozpocznij za darmo
-            </a>
+            <button className="btn btn-join">Rozpocznij za darmo</button>
 
             <div className="hero-stats">
               <div className="stat-item">

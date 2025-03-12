@@ -7,8 +7,6 @@ const Footer: React.FC = () => {
     { text: "Główna", url: "#" },
     { text: "O nas", url: "#" },
     { text: "Jak działa", url: "#" },
-    { text: "Cennik", url: "#" },
-    { text: "Blog", url: "#" },
   ];
 
   const helpLinks = [
@@ -38,12 +36,6 @@ const Footer: React.FC = () => {
                 f
               </a>
               <a href="#" className="social-link">
-                t
-              </a>
-              <a href="#" className="social-link">
-                in
-              </a>
-              <a href="#" className="social-link">
                 ig
               </a>
             </div>
@@ -57,15 +49,11 @@ const Footer: React.FC = () => {
             <ul className="contact-info">
               <li>
                 <span className="contact-icon">📞</span>
-                +48 123 456 789
+                +48 507 637 692
               </li>
               <li>
                 <span className="contact-icon">✉</span>
                 kontakt@loveconnect.pl
-              </li>
-              <li>
-                <span className="contact-icon">📍</span>
-                ul. Miłosna 123, 00-001 Warszawa
               </li>
             </ul>
           </div>
