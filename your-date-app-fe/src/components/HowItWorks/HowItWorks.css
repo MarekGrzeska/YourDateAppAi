@@ -1,0 +1,85 @@
+.how-it-works {
+    padding: 100px 0;
+    background-color: var(--darker-color);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .steps-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .step-item {
+    flex: 0 0 30%;
+    text-align: center;
+    padding: 30px;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    border: 1px solid var(--border-color);
+  }
+  
+  .step-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    background-color: var(--card-bg-hover);
+  }
+  
+  .step-number {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(255, 56, 106, 0.3);
+  }
+  
+  .step-icon {
+    width: 80px;
+    height: 80px;
+    margin: 20px auto;
+    background-color: rgba(255, 56, 106, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: var(--primary-color);
+  }
+  
+  .step-item h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--light-color);
+  }
+  
+  .step-item p {
+    font-size: 16px;
+    color: var(--text-color-secondary);
+  }
+  
+  @media screen and (max-width: 992px) {
+    .steps-container {
+      flex-direction: column;
+    }
+    
+    .step-item {
+      margin-bottom: 50px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }

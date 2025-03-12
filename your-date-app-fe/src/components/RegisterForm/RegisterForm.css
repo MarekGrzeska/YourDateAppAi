@@ -1,0 +1,405 @@
+.register-container {
+    margin-top: 20px;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+    position: relative;
+    z-index: 10;
+  }
+  
+  .register-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .register-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .register-header p {
+    color: var(--text-color-secondary);
+    font-size: 16px;
+  }
+  
+  .step-container {
+    display: none;
+  }
+  
+  .step-container.active {
+    display: block;
+  }
+  
+  .steps-indicator {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  
+  .step-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--border-color);
+    margin: 0 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .step-dot.active {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    transform: scale(1.2);
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--text-color);
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--text-color);
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(255, 56, 106, 0.2);
+  }
+  
+  .form-control.error {
+    border-color: var(--error-color);
+  }
+  
+  .error-message {
+    color: var(--error-color);
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+  }
+  
+  .error-message.show {
+    display: block;
+  }
+  
+  .gender-options {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .gender-card {
+    flex: 1;
+    margin: 0 10px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .gender-card.selected {
+    border-color: var(--primary-color);
+    background-color: rgba(255, 56, 106, 0.1);
+    transform: translateY(-5px);
+  }
+  
+  .gender-card:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(255, 56, 106, 0.05);
+  }
+  
+  .gender-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .gender-label {
+    font-weight: 500;
+  }
+  
+  .interest-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -5px;
+  }
+  
+  .interest-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .interest-card.selected {
+    background-color: rgba(255, 56, 106, 0.1);
+    border-color: var(--primary-color);
+  }
+  
+  .interest-card:hover {
+    border-color: var(--primary-color);
+  }
+  
+  .password-strength {
+    margin-top: 8px;
+  }
+  
+  .strength-meter {
+    height: 5px;
+    background-color: var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 5px;
+  }
+  
+  .strength-meter div {
+    height: 100%;
+    width: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .weak {
+    width: 25% !important;
+    background-color: #ff4747;
+  }
+  
+  .medium {
+    width: 50% !important;
+    background-color: #ffa500;
+  }
+  
+  .strong {
+    width: 75% !important;
+    background-color: #2ecc71;
+  }
+  
+  .very-strong {
+    width: 100% !important;
+    background-color: #28c76f;
+  }
+  
+  .strength-text {
+    color: var(--text-color-secondary);
+    font-size: 12px;
+  }
+  
+  .terms-checkbox {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .terms-checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-top: 3px;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  
+  .terms-checkbox input[type="checkbox"]:checked::before {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--primary-color);
+    font-size: 12px;
+  }
+  
+  .terms-checkbox label {
+    color: var(--text-color-secondary);
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .terms-checkbox a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .terms-checkbox a:hover {
+    color: var(--primary-color);
+  }
+  
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+  }
+  
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .btn-prev {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 14px 25px;
+  }
+  
+  .btn-prev:hover:not(:disabled) {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .btn-next, .btn-submit {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    box-shadow: 0 5px 15px rgba(255, 56, 106, 0.3);
+  }
+  
+  .btn-next:hover:not(:disabled), .btn-submit:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 56, 106, 0.4);
+  }
+  
+  .social-register {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .social-register-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .social-register-text span {
+    color: var(--text-color-secondary);
+    font-size: 14px;
+    padding: 0 15px;
+  }
+  
+  .social-register-text::before,
+  .social-register-text::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: var(--border-color);
+  }
+  
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--medium-dark);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    font-size: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .social-btn:hover {
+    transform: translateY(-3px);
+    background-color: var(--card-bg-hover);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .login-link {
+    margin-top: 30px;
+    text-align: center;
+    color: var(--text-color-secondary);
+    font-size: 14px;
+  }
+  
+  .login-link a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .login-link a:hover {
+    color: var(--primary-color);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .register-container {
+      padding: 30px;
+      max-width: 90%;
+    }
+    
+    .gender-options {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .gender-card {
+      margin: 5px 0;
+      height: 80px;
+    }
+    
+    .btn-container {
+      flex-direction: column-reverse;
+      gap: 15px;
+    }
+    
+    .btn {
+      width: 100%;
+    }
+    
+    .social-buttons {
+      flex-wrap: wrap;
+    }
+  }

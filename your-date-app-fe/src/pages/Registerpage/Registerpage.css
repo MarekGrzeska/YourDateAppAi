@@ -1,0 +1,162 @@
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 20px 0;
+  background-color: var(--darker-color);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo span {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-left: 5px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.auth-links {
+  display: flex;
+  align-items: center;
+}
+
+.auth-link {
+  color: var(--text-color);
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.auth-link:hover {
+  color: var(--primary-color);
+}
+
+.auth-link.active {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  position: relative;
+}
+
+.auth-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  border-radius: 2px;
+}
+
+/* Updated section to match login-section exactly */
+.register-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Adjusted z-index for consistent behavior with login page */
+.register-section::before {
+  content: '';
+  position: absolute;
+  top: -300px;
+  right: -300px;
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(45deg, rgba(133, 0, 255, 0.1), rgba(255, 56, 106, 0.1));
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.register-section::after {
+  content: '';
+  position: absolute;
+  bottom: -200px;
+  left: -200px;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(45deg, rgba(0, 208, 255, 0.1), rgba(133, 0, 255, 0.1));
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+footer {
+  background-color: var(--darker-color);
+  padding: 20px 0;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.footer-text {
+  color: var(--text-color-secondary);
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .register-section {
+    padding: 40px 0;
+  }
+  
+  .navbar {
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  .logo-icon {
+    width: 35px;
+    height: 35px;
+  }
+}

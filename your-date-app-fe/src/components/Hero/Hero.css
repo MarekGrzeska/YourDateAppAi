@@ -1,0 +1,107 @@
+.hero {
+    padding: 180px 0 100px;
+    background-color: var(--dark-color);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -300px;
+    right: -300px;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(133, 0, 255, 0.15), rgba(255, 56, 106, 0.15));
+    z-index: 0;
+    filter: blur(50px);
+  }
+  
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -200px;
+    left: -200px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(0, 208, 255, 0.15), rgba(133, 0, 255, 0.15));
+    z-index: 0;
+    filter: blur(50px);
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .hero-text {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .hero-text h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .hero-text p {
+    font-size: 18px;
+    color: var(--text-color-secondary);
+    margin-bottom: 30px;
+    max-width: 600px;
+  }
+  
+  .highlight {
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+  
+  .hero-stats {
+    display: flex;
+    margin-top: 50px;
+    justify-content: flex-start;
+  }
+  
+  .stat-item {
+    margin-right: 50px;
+  }
+  
+  .stat-number {
+    font-size: 36px;
+    font-weight: 800;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 5px;
+  }
+  
+  .stat-text {
+    font-size: 16px;
+    color: var(--text-color-secondary);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hero-text h1 {
+      font-size: 36px;
+    }
+    
+    .hero-stats {
+      flex-wrap: wrap;
+    }
+    
+    .stat-item {
+      margin-right: 30px;
+      margin-bottom: 20px;
+    }
+  }

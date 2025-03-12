@@ -1,0 +1,99 @@
+:root {
+  --primary-color: #ff386a;
+  --secondary-color: #8500ff;
+  --accent-color: #00d0ff;
+  --dark-color: #0f0f17;
+  --darker-color: #090912;
+  --medium-dark: #1a1a2e;
+  --light-color: #f8f9fa;
+  --text-color: #eaeaea;
+  --text-color-secondary: #b0b0b0;
+  --gray-color: #b0b0b0;
+  --light-gray: #333340;
+  --card-bg: #1a1a2e;
+  --card-bg-hover: #24243c;
+  --border-color: #33334d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: var(--dark-color);
+  color: var(--text-color);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.section-header p {
+  font-size: 1.125rem;
+  color: var(--text-color-secondary);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  border: none;
+  font-size: 16px;
+}
+
+.btn-login {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  margin-right: 15px;
+}
+
+.btn-login:hover {
+  background-color: rgba(255, 56, 106, 0.1);
+}
+
+.btn-register {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  box-shadow: 0 5px 15px rgba(255, 56, 106, 0.3);
+}
+
+.btn-register:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 56, 106, 0.4);
+}
